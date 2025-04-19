@@ -202,14 +202,14 @@ every graffiti METFOX.CC - $5</p>
       document.getElementById(id).style.display = "none";
     }
 
-    // Матрица с вспышками
+   
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const letters = "hueksrob";
+    const letters = "01METFOX";
     const fontSize = 16;
     const columns = canvas.width / fontSize;
     const drops = Array.from({ length: columns }, () => 1);
