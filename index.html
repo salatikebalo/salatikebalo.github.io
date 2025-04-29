@@ -18,6 +18,9 @@
       background: black;
       color: white;
       overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     #matrixCanvas {
@@ -35,6 +38,7 @@
       z-index: 1;
       text-align: center;
       padding: 20px 0 5px;
+      width: 100%;
     }
 
     .avatar {
@@ -53,6 +57,7 @@
       margin-bottom: 20px;
       font-size: 1.5rem;
       padding: 0 10px;
+      width: 100%;
     }
 
     .qouote-text {
@@ -63,7 +68,7 @@
       margin-bottom: 20px;
       font-size: 1rem;
       padding: 0 10px;
-      
+      width: 100%;
     }
   
     .menu-container {
@@ -73,10 +78,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-       position: relative;
       justify-content: flex-start;
       gap: 10px;
       padding: 10px 20px;
+      width: 100%;
+      flex-grow: 1;
     }
 
     .menu-item {
@@ -110,34 +116,35 @@
       z-index: 1000;
     }
 
-   .popup-content {
-  background: #111;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  color: white;
-  max-width: 90vw;
-  max-height: 80vh;
-  overflow: auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  letter-spacing: 0.7px;
-}
+    .popup-content {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      max-width: 90vw;
+      max-height: 80vh;
+      overflow: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      letter-spacing: 0.7px;
+    }
     
-.random-text {
-  position: absolute;
-  font-size: 1.2rem;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: all 0.8s ease;
-  z-index: 999;
-}
+    .random-text {
+      position: absolute;
+      font-size: 1.2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: all 0.8s ease;
+      z-index: 999;
+    }
+    
     .close-btn {
       margin-top: 15px;
       background: red;
@@ -161,57 +168,47 @@
   </style>
 </head>
 <body>
-
   <canvas id="matrixCanvas"></canvas>
 
-
   <div class="header">
-    
     <img src="https://i.ibb.co/tM4CLRrV/2.png" alt="Top Avatar" class="avatar" />
- <div id="randomText" class="random-text">
+    <div id="randomText" class="random-text"></div>
  
-
- 
-  <div class="intro-text"><b>WELCOME BACK</b> <br>
-    <b> მოგესალმებით დაბრუნებას!</b> 
-    
+    <div class="intro-text"><b>WELCOME BACK</b> <br>
+      <b> მოგესალმებით დაბრუნებას!</b> 
+    </div>
   </div>
-
 
   <div class="menu-container">
     <a href="https://t.me/ffdseruobfdrtuhbot" class="menu-item">bot</a>
     <a href="https://t.me/+XmAIQSZuIw5kYzc1" class="menu-item">chat</a>
-     <a href="https://metfox.brut.store/reviews" class="menu-item">web 1.0</a>
+    <a href="https://metfox.brut.store/reviews" class="menu-item">web 1.0</a>
     <div class="menu-item" onclick="openPopup('popup1')">work</div>
     <div class="menu-item" onclick="openPopup('popup2')">promotions</div>
 
-
-  <div class=“qouote-text"
-    <b> every 7th order - $50<br>
- every feedback - $1</b> 
-</div>
- 
+    <div class="qouote-text">
+      <b> every 7th order - $50<br>
+      every feedback - $1</b> 
+    </div>
+  </div>
   
   <div class="bottom-avatar-container">
-      
-    <img src="https://i.ibb.co/tM4CLRrV/2.png" alt=“Bottom Avatar" class="avatar" />
- 
+    <img src="https://i.ibb.co/tM4CLRrV/2.png" alt="Bottom Avatar" class="avatar" />
   </div>
-
 
   <div class="popup" id="popup1">
     <div class="popup-content">
-           <p><b>Option 1 - Street Artist</b>🎨</p>
-<p>We pay people for tagging us, spray metfox.cc get $5 balance on bot or wallet</p>
-<br> <b>ვარიანტი 1 - ქუჩის არტისტი</b>🎨
-<p>გაგვიკეთეთ თეგი, გადადით metfox.cc-ზე და მიიღეთ $5 ბალანსი ბოტზე ან საფულეში</p>
-<br>
+      <p><b>Option 1 - Street Artist</b>🎨</p>
+      <p>We pay people for tagging us, spray metfox.cc get $5 balance on bot or wallet</p>
+      <br> <b>ვარიანტი 1 - ქუჩის არტისტი</b>🎨
+      <p>გაგვიკეთეთ თეგი, გადადით metfox.cc-ზე და მიიღეთ $5 ბალანსი ბოტზე ან საფულეში</p>
       <br>
-    
-<p><b>Option2 - Courier</b>📦</p> 
-<p>Deposits starts from $150, work in your city and country, earn from $2.5K, for more info contact @deepdotcat:matrix.org or support
-</p> <br> <p><b>ვარიანტი 2 - კურიერი</b>📦</p> 
-<p>დეპოზიტი იწყება $150-დან, იმუშავეთ თქვენს ქალაქსა და ქვეყანაში, გამოიმუშავეთ $2,500-დან; დეტალებისთვის დაუკავშირდით @deepdotcat:matrix.org ან მხარდაჭერას</p>
+      <br>
+      <p><b>Option2 - Courier</b>📦</p> 
+      <p>Deposits starts from $150, work in your city and country, earn from $2.5K, for more info contact @deepdotcat:matrix.org or support</p> 
+      <br> 
+      <p><b>ვარიანტი 2 - კურიერი</b>📦</p> 
+      <p>დეპოზიტი იწყება $150-დან, იმუშავეთ თქვენს ქალაქსა და ქვეყანაში, გამოიმუშავეთ $2,500-დან; დეტალებისთვის დაუკავშირდით @deepdotcat:matrix.org ან მხარდაჭერას</p>
       <button class="close-btn" onclick="closePopup('popup1')">close</button>
     </div>
   </div>
@@ -220,40 +217,37 @@
     <div class="popup-content">
       <p><b>🔥CURRENT PROMOS🔥</b><br>
         <b>🔥მიმდინარე აქციები🔥</b><br><br>
-every 7th purchase - $50 <br>ყოველი მეშვიდე შენაძენი - $50 <br><br>
-every feedback 3+ stars - $1 <br>ყოველი გამოხმაურება 3+ ვარსკვლავით - $1 <br><br>
+        every 7th purchase - $50 <br>ყოველი მეშვიდე შენაძენი - $50 <br><br>
+        every feedback 3+ stars - $1 <br>ყოველი გამოხმაურება 3+ ვარსკვლავით - $1 <br><br>
         every referal purchase - 5%<br>ყოველი რეფერალური შენაძენი - 5%<br><br>
-every graffiti METFOX.CC - $5<br> ყოველი გრაფიტი METFOX.CC - $5</p>
+        every graffiti METFOX.CC - $5<br> ყოველი გრაფიტი METFOX.CC - $5</p>
       <button class="close-btn" onclick="closePopup('popup2')">close</button>
     </div>
   </div>
 
-  
   <script>
-    <script>
-  const randomText = document.getElementById('randomText');
+    const randomText = document.getElementById('randomText');
 
-  function moveRandomly() {
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+    function moveRandomly() {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
 
-    const maxX = viewportWidth - randomText.offsetWidth;
-    const maxY = viewportHeight - randomText.offsetHeight;
+      const maxX = viewportWidth - randomText.offsetWidth;
+      const maxY = viewportHeight - randomText.offsetHeight;
 
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
 
-    randomText.style.left = `${randomX}px`;
-    randomText.style.top = `${randomY}px`;
-  }
-
-  // Move every 3 seconds
-  setInterval(moveRandomly, 3000);
-
-  // Initial position
-  window.onload = moveRandomly;
+      randomText.style.left = `${randomX}px`;
+      randomText.style.top = `${randomY}px`;
     }
-  
+
+    // Move every 3 seconds
+    setInterval(moveRandomly, 3000);
+
+    // Initial position
+    window.onload = moveRandomly;
+
     function openPopup(id) {
       document.getElementById(id).style.display = "flex";
     }
@@ -262,17 +256,20 @@ every graffiti METFOX.CC - $5<br> ყოველი გრაფიტი METFO
       document.getElementById(id).style.display = "none";
     }
 
-   
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
 
     const letters = "01METFOX";
     const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = Array.from({ length: columns }, () => 1);
+    let columns = canvas.width / fontSize;
+    let drops = Array.from({ length: columns }, () => 1);
 
     const flashes = []; 
 
@@ -294,12 +291,10 @@ every graffiti METFOX.CC - $5<br> ყოველი გრაფიტი METFO
       ctx.fillStyle = "red";
       ctx.font = `${fontSize}px monospace`;
 
-      
       if (Math.random() < 0.10) { 
         createFlash();
       }
 
- 
       flashes.forEach((flash, index) => {
         for (let i = 0; i < flash.length; i++) {
           const text = letters.charAt(Math.floor(Math.random() * letters.length));
@@ -315,10 +310,10 @@ every graffiti METFOX.CC - $5<br> ყოველი გრაფიტი METFO
 
     setInterval(drawMatrix, 50); 
 
-   
     window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      resizeCanvas();
+      columns = canvas.width / fontSize;
+      drops = Array.from({ length: columns }, () => 1);
     });
   </script>
 </body>
